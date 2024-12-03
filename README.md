@@ -35,21 +35,47 @@ A full subtractor is a combinational circuit that performs subtraction involving
 Diff = A ⊕ B ⊕ Bin 
 
 Borrow out = A'Bin + A'B + BBin
+![image](https://github.com/user-attachments/assets/810d6c12-a370-4fc4-9e8c-cd1d57bfb176)
+
 
 **Truthtable**
+![image](https://github.com/user-attachments/assets/acb82e81-706c-4f54-a3d1-d3aae49fabcd)
+
 
 **Procedure**
 
 Write the detailed procedure here
 
 **Program:**
+Full Adder: 
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+~~~module ex(a,b,cin,sum,carry);
+input a,b,cin;
+output sum, carry;
+assign sum=(a^b^cin);
+assign carry=((a&b)|(b&cin)|(cin&a));
+endmodule
 
+Full Subtractor:
+
+module ex2(a,b,bin,borr,diff);
+input a,b,bin;
+output diff, borr;
+assign diff=(a^b^bin);
+assign borr=((~a&b)|(b&bin)|(bin&~a));
+endmodule
+~~~
 **RTL Schematic**
+![image](https://github.com/user-attachments/assets/ca371c30-4d11-4f77-a386-0423a5022e86)
+![image](https://github.com/user-attachments/assets/7a295b31-e5eb-43fa-85bd-bcc93b77876c)
+
+
 
 **Output Timing Waveform**
+![image](https://github.com/user-attachments/assets/244c100f-e090-4894-84b4-8a0b73f1f641)
+![image](https://github.com/user-attachments/assets/1d539bdd-557c-4be5-b65d-75a6f70083f0)
+
+
 
 **Result:**
 
