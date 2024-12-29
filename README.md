@@ -38,12 +38,29 @@ Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
 
+1.FULL ADDER
+
+![WhatsApp Image 2024-12-21 at 09 58 48_2ab9c91a](https://github.com/user-attachments/assets/fa54badc-e2d4-4c1b-90e7-cceb9814dbcc)
+
+2.FULL SUBTRACTOR
+
+![WhatsApp Image 2024-12-21 at 09 59 07_32a49606](https://github.com/user-attachments/assets/9ca9ad3d-7c01-47d1-9717-098a1307209c)
+
+
 **Procedure**
 
-Write the detailed procedure here
+1.Type the program in Quartus software.
+
+2.Compile and run the program.
+
+3.Generate the RTL schematic and save the logic diagram.
+
+4.Create nodes for inputs and outputs to generate the timing diagram.
+
+5.For different input combinations generate the timing diagram. Program:
 
 **Program:**
-~~~
+```
 Full Adder: 
 
 module ex(a,b,cin,sum,carry);
@@ -61,14 +78,18 @@ output diff, borr;
 assign diff=(a^b^bin);
 assign borr=((~a&b)|(b&bin)|(bin&~a));
 endmodule
-~~~
+```
 **RTL Schematic**
+
 ![image](https://github.com/user-attachments/assets/77681f81-4678-47ff-8937-09289c1fd417)
+
 ![image](https://github.com/user-attachments/assets/1d18775a-16ad-42ba-9510-86a53087458b)
 
 
 **Output Timing Waveform**
+
 ![image](https://github.com/user-attachments/assets/93c7fb26-7070-42f4-98ff-a0d4fd879f04)
+
 ![image](https://github.com/user-attachments/assets/2c2f6200-4ea3-40fa-a05a-6bd8221c7df5)
 
 
